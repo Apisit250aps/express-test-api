@@ -125,21 +125,6 @@ PUT /profile
 **Headers**:
 - `Authorization`: Bearer {JWT_TOKEN}
 
-**Request Body**:
-```json
-{
-  "username": "string",
-  "email": "string",
-  "province": "string",
-  "district": "string",
-  "sub_district": "string",
-  "createdAt": "date"
-}
-```
-
-#### PUT /profile
-Update user profile information.
-
 **Request Body:**
 ```json
 {
