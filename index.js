@@ -118,7 +118,6 @@ app.put("/profile", authenticateToken, async (req, res) => {
             district,
             sub_district,
             district,
-            sub_district,
             fname,
             lname
           }
