@@ -117,7 +117,6 @@ app.put("/profile", authenticateToken, async (req, res) => {
             province,
             district,
             sub_district,
-            district,
             fname,
             lname
           }
