@@ -110,8 +110,19 @@ app.put("/profile", authenticateToken, async (req, res) => {
     const result = await db
       .collection("users")
       .updateOne(
-        { username: req.user.username, fname, lname },
-        { $set: { email, province, district, sub_district } }
+        { username: req.user.username },
+        {
+          $set: {
+            email,
+            province,
+            district,
+            sub_district,
+            district,
+            sub_district,
+            fname,
+            lname
+          }
+        }
       )
 
     if (result.modifiedCount === 0) {
@@ -212,7 +223,6 @@ async function main() {
   await connectDB()
   loadJsonData()
 }
-
 
 main()
 app.listen(port, async () => {
