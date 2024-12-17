@@ -105,12 +105,12 @@ app.get("/profile", authenticateToken, async (req, res) => {
 
 app.put("/profile", authenticateToken, async (req, res) => {
   try {
-    const { email, province, district, sub_district } = req.body
+    const { email, province, district, sub_district, fname, lname } = req.body
 
     const result = await db
       .collection("users")
       .updateOne(
-        { username: req.user.username },
+        { username: req.user.username, fname, lname },
         { $set: { email, province, district, sub_district } }
       )
 

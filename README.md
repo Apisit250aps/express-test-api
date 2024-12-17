@@ -121,6 +121,8 @@ Update user profile information.
 **Request Body:**
 ```json
 {
+  "fname":"string",
+  "lname":"string",
   "email": "string",
   "province": "string", 
   "district": "string",
